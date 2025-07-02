@@ -1,0 +1,38 @@
+@use "components/Header";
+@use "./variables" as*;
+
+/* global variables if needed */
+:root {
+  --primary-color: #4b31b4;
+  --secondary-color: #e1dfff;
+  --tertiary-color: #bfbeff;
+  --grey-color: #f3f3f3;
+  --white-color: #ffffff;
+  --salomie-color: #fedf8e;
+  --midnight-color: #181825;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--white-color);
+  color: var(--midnight-color);
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  padding-top: 80px; // so header does not overlap content
+}
+
+.footer {
+  background: var(--midnight-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 2rem;
+}

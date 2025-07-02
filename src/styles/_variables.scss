@@ -1,0 +1,28 @@
+:root {
+  /* Base colors */
+  --color-primary: #ffffff;     /* White */
+  --color-secondary: #909090;   /* Light gray */
+  --color-accent: #1B63FF;      /* Strong accent blue */
+  --color-text: #ededed;        /* General light text */
+  --color-dark: #17171c;        /* Dark background */
+  --color-darker: #292b33;      /* Darker background shade */
+  --color-highlight: #00ADB5;   /* Teal accent */
+
+  /* Additional brand colors */
+  --color-gold: #FAC994;
+  --color-muted: #50505082;
+
+  /* Link colors */
+  --color-link: #0058e6;
+  --color-link-hover: #0048bd;
+
+  /* Shadows */
+  --shadow-light: 6px 6px 9px rgba(0, 0, 0, 0.2);
+  --shadow-heavy: 12px 12px 50px rgba(0, 0, 0, 0.4);
+
+  /* Typography sizes */
+  --font-size-small: 13px;
+  --font-size-medium: 20px;
+  --font-size-large: 36px;
+  --font-size-xlarge: 42px;
+}

@@ -1,0 +1,84 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-dark, #181825);
+  z-index: 999;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+
+  @media (max-width: 1024px) {
+    padding: 1rem;
+  }
+
+  &__left {
+    flex: 1;
+  }
+
+  &__logo {
+    flex: 1;
+    text-align: center;
+
+    .nav-logo {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--color-primary, #ffffff);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-highlight, #00adb5);
+      }
+    }
+  }
+
+  &__burger {
+    flex: 1;
+    text-align: right;
+
+    &-button {
+      background: none;
+      border: none;
+      color: var(--color-primary, #ffffff);
+      font-size: 2rem;
+      cursor: pointer;
+
+      &.fadeIn {
+        animation: fadeIn 1s ease forwards;
+      }
+
+      &.shimmer {
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--color-highlight, #00adb5);
+        }
+      }
+    }
+
+    &-text {
+      margin-left: 0.5rem;
+      font-size: 1.4rem;
+      color: var(--color-highlight, #00adb5);
+    }
+  }
+}
+
+/* simple fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
