@@ -11,7 +11,7 @@ const Header = () => {
 
                 <div className="header__logo">
                     <a href="/" className="nav-logo">
-                        Fred Brosman {/* or replace with <img> if you prefer */}
+                        <img src="/AskendFredLogowhite.png" alt="AskendFredLogowhite" />
                     </a>
                 </div>
 
