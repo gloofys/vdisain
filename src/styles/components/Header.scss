@@ -38,29 +38,46 @@
     text-align: right;
 
     &-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       background: none;
       border: none;
-      color: var(--color-primary, #ffffff);
-      font-size: 2rem;
+      color: #00ADB5;
       cursor: pointer;
+      padding: 0;
+      text-decoration: none;
+      transition: color 0.3s ease;
 
       &.fadeIn {
         animation: fadeIn 1s ease forwards;
       }
 
-      &.shimmer {
-        transition: color 0.3s;
+      &.shimmer:hover {
+        color: var(--color-highlight, #00ADB5);
+      }
 
-        &:hover {
-          color: var(--color-highlight, #00adb5);
-        }
+      i {
+        font-size: 1.6rem;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0; // no margin-top
       }
     }
 
     &-text {
-      margin-left: 0.5rem;
-      font-size: 1.4rem;
-      color: var(--color-highlight, #00adb5);
+      display: none;
+
+      @media (min-width: 768px) {
+        display: inline;
+        font-family: 'Montserrat', sans-serif;
+        color: #00ADB5;
+        font-size: 26px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 300ms ease;
+      }
     }
   }
 }

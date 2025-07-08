@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/components/Header.scss";
+import "../styles/main.scss"
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -21,8 +22,9 @@ const Header = () => {
                         onClick={() => setMenuOpen(!menuOpen)}
                         aria-label="Open menu"
                     >
-                        <i className="jki jki-burger-menu-light"></i>
                         <span className="header__burger-text">Menüü</span>
+                        <i className="jki jki-burger-menu-light" aria-hidden="true"></i>
+
                     </button>
                 </div>
             </header>
