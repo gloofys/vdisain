@@ -11,7 +11,7 @@ const Header = () => {
 
                 <div className="header__logo">
                     <a href="/" className="nav-logo">
-                        <img src="/AskendFredLogowhite.png" alt="AskendFredLogowhite" />
+                        <img className="nav-logo" src="/AskendFredLogowhite.png" alt="AskendFredLogowhite" />
                     </a>
                 </div>
 
