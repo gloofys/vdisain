@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/components/Header.scss";
 import "../styles/main.scss"
+import MenuOverlay from "./MenuOverlay";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -28,6 +29,7 @@ const Header = () => {
                     </button>
                 </div>
             </header>
+            {menuOpen && <MenuOverlay onClose={() => setMenuOpen(false)} />}
         </div>
     );
 };
