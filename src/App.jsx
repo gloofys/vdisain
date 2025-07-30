@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 import "./styles/main.scss";
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
             <main className="app-content">
 
 
-                {/* <Hero /> */}
+                <Hero />
                 {/* <About /> */}
                 {/* <Projects /> */}
                 {/* <Contact /> */}
