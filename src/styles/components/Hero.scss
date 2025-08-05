@@ -7,17 +7,27 @@
   text-align: center;
   color: white;
   overflow: hidden;
+  z-index: 1;
+
 
   background: radial-gradient(circle at center, #1d1d2e 0%, #0a0a14 100%);
 
   #tsparticles {
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: 5;
+
+    canvas {
+      position: absolute !important; // override fixed
+      inset: 0 !important;
+      z-index: 0 !important;
+      pointer-events: auto !important; // allow mouse hover
+    }
   }
 
+
   &__content {
-    z-index: 1;
+    z-index: 10;
     max-width: 900px;
     padding: 2rem;
 

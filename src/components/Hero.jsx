@@ -18,31 +18,35 @@ const Hero = () => {
             {init && (
                 <Particles
                     id="tsparticles"
+                    style={{
+                        position: "absolute",
+                        inset: 0,
+                        zIndex: 0,
+                        pointerEvents: "auto", // <-- required for repulse to work
+                    }}
                     options={{
+                        fullScreen: { enable: false },
                         particles: {
-                            number: { value: 80, density: { enable: true, value_area: 800 } },
+                            number: { value: 180, density: { enable: true, value_area: 800 } },
                             color: { value: "#ffffff" },
                             shape: { type: "circle" },
                             opacity: { value: 0.5 },
                             size: { value: 2, random: true },
-                            move: { enable: true, speed: 0.7 },
+                            move: { enable: true, speed: 0.3 },
                         },
                         interactivity: {
                             events: {
-                                onhover: { enable: true, mode: "repulse" },
-                                onclick: { enable: true, mode: "repulse" },
-                                resize: true
+                                onHover: { enable: true, mode: "repulse" },
+                                onClick: { enable: true, mode: "repulse" },
                             },
                             modes: {
-                                repulse: {
-                                    distance: 150,
-                                    duration: 0.6
-                                },
+                                repulse: { distance: 100, duration: 0.4 },
                             },
                         },
                         retina_detect: true,
                     }}
                 />
+
             )}
 
             <div className="hero__content">
