@@ -3,6 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 import "../styles/components/Hero.scss";
+import RotatingHeadline from "./RotatingHeadline.jsx";
 
 const Hero = () => {
     const [init, setInit] = useState(false);
@@ -50,10 +51,14 @@ const Hero = () => {
             )}
 
             <div className="hero__content">
-                <h1>
-                    Tõstame<br />
-                    veebidisaini <span className="highlight">standardeid.</span>
-                </h1>
+                <RotatingHeadline
+                    rotatingWords={[
+                        "veebilahenduste",
+                        "veebidisaini",
+                        "veebiarenduse",
+                        "digiturunduse"
+                    ]}
+                />
                 <div className="hero__buttons">
                     <a href="#projects" className="btn">Tehtud tööd</a>
                     <a href="#contact" className="btn btn--secondary">Kodulehe hooldus</a>

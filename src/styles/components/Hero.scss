@@ -32,12 +32,10 @@
     padding: 2rem;
 
     h1 {
-      font-size: 5rem;
-      font-weight: 700;
-      line-height: 1.2;
+
 
       .highlight {
-        color: var(--primary-color);
+        color: #00ADB5;;
       }
 
       @media (max-width: 768px) {
