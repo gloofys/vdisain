@@ -59,9 +59,9 @@
     justify-content: center;
     padding: 2rem;
     color: #000;
-@media (min-width: 1024px){
-  width: 40%;
-}
+    @media (min-width: 1024px){
+      width: 40%;
+    }
     @media (max-width: 1024px) {
       width: 100%;
     }
@@ -175,11 +175,57 @@
 
 @keyframes fadeInMenu {
   from {
-    opacity: 0;
     transform: translateY(-20px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
+  }
+}
+
+:root {
+  --overlay-dur: 1200ms;
+  --overlay-ease: cubic-bezier(.2,.8,.2,1);
+}
+
+
+.menu-overlay .menu-overlay__left {
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: slideDownIn var(--overlay-dur) var(--overlay-ease) both;
+}
+.menu-overlay .menu-overlay__right {
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: slideUpIn var(--overlay-dur) var(--overlay-ease) both;
+}
+
+
+.menu-overlay.closing .menu-overlay__left {
+  animation: slideUpOut var(--overlay-dur) var(--overlay-ease) both;
+}
+
+
+.menu-overlay.closing .menu-overlay__right {
+  animation: slideUpOut var(--overlay-dur) var(--overlay-ease) both;
+}
+
+@keyframes slideDownIn {
+  from { transform: translate3d(0,-100%,0)}
+  to   { transform: translate3d(0,  0 ,0)}
+}
+@keyframes slideUpIn {
+  from { transform: translate3d(0, 100%,0)}
+  to   { transform: translate3d(0,  0 ,0)}
+}
+@keyframes slideUpOut {
+  from { transform: translate3d(0, 0, 0)}
+  to   { transform: translate3d(0, -100%, 0)}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-overlay,
+  .menu-overlay__left,
+  .menu-overlay__right {
+    animation: none !important;
   }
 }

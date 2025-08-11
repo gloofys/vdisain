@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "../styles/components/Header.scss";
 import "../styles/main.scss"
+import "../styles/components/Header.scss";
 import MenuOverlay from "./MenuOverlay";
 
 const Header = () => {

@@ -19,25 +19,26 @@
     padding: 1rem;
   }
 
+
   &__left {
     display: none;
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
       display: block;
-      width:25%;
+      width: 25%;
     }
   }
 
   &__logo {
     flex: 1;
     text-align: center;
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
       text-align: left;
     }
 
     .nav-logo {
       width: 200px;
       max-width: 100%;
-      @media (max-width: 1024px){
+      @media (max-width: 1024px) {
         padding: 0;
         margin: 0;
       }
@@ -47,6 +48,7 @@
   &__burger {
     flex: 1;
     text-align: right;
+
 
     &-button {
       display: inline-flex;
@@ -65,7 +67,7 @@
       }
 
       &.shimmer:hover {
-        color: var(--color-highlight, #00ADB5);
+        color: var(--color-highlight, #ffffff);
       }
 
       i {
@@ -73,27 +75,34 @@
         line-height: 1;
         display: inline-block;
         vertical-align: middle;
-        margin: 0; // no margin-top
+        margin: 0;
+        color:inherit;
+        font-weight: 400;
+      }
+      &:hover {
+        color: #fff !important;
       }
     }
 
     &-text {
       display: none;
+      color: inherit;
 
       @media (min-width: 768px) {
         display: inline;
         font-family: 'Montserrat', sans-serif;
-        color: #00ADB5;
         font-size: 26px;
         font-weight: 400;
         cursor: pointer;
-        transition: 300ms ease;
+        transition: color 0.3s ease;
       }
     }
+
   }
 }
 
-/* simple fadeIn animation */
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -104,3 +113,4 @@
     transform: translateY(0);
   }
 }
+
