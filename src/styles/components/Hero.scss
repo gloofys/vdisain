@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .hero {
   position: relative;
   height: 100vh;
@@ -113,3 +115,53 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.hero__slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+$slide-count: 3;
+$cycle: 12s;
+$fade-in: 1.6s;
+$visible: 2.8s;
+$fade-out: 1.6s;
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  animation: heroFade $cycle linear infinite;
+  will-change: opacity, transform;
+  transform: scale(1.02);
+}
+
+.hero__slide:nth-child(1) {
+  background-image: url("/bg_01.png");
+  animation-delay: 0s;
+}
+.hero__slide:nth-child(2) {
+  background-image: url("/bg_02.png");
+  animation-delay: math.div($cycle, $slide-count);
+}
+.hero__slide:nth-child(3) {
+  background-image: url("/bg_03.png");
+  animation-delay: math.div($cycle, $slide-count) * 2;
+}
+
+@keyframes heroFade {
+  0% { opacity: 0; }
+  #{math.percentage(math.div($fade-in, $cycle))} { opacity: 1; }
+  #{math.percentage(math.div($fade-in + $visible, $cycle))} { opacity: 1; }
+  #{math.percentage(math.div($fade-in + $visible + $fade-out, $cycle))} { opacity: 0; }
+}
+
+
+#tsparticles { z-index: 0; }
+.hero__content { position: relative; z-index: 1; }
+.hero__circle-text { position: absolute; z-index: 1; }

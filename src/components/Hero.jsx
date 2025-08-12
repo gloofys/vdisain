@@ -16,6 +16,11 @@ const Hero = () => {
 
     return (
         <section className="hero" id="home">
+            <div className="hero__slideshow" aria-hidden="true">
+                <span className="hero__slide"></span>
+                <span className="hero__slide"></span>
+                <span className="hero__slide"></span>
+            </div>
             {init && (
                 <Particles
                     id="tsparticles"
@@ -26,22 +31,22 @@ const Hero = () => {
                         pointerEvents: "auto", // <-- required for repulse to work
                     }}
                     options={{
-                        fullScreen: { enable: false },
+                        fullScreen: {enable: false},
                         particles: {
-                            number: { value: 180, density: { enable: true, value_area: 800 } },
-                            color: { value: "#ffffff" },
-                            shape: { type: "circle" },
-                            opacity: { value: 0.5 },
-                            size: { value: 2, random: true },
-                            move: { enable: true, speed: 0.3 },
+                            number: {value: 180, density: {enable: true, value_area: 800}},
+                            color: {value: "#ffffff"},
+                            shape: {type: "circle"},
+                            opacity: {value: 0.5},
+                            size: {value: 2, random: true},
+                            move: {enable: true, speed: 0.3},
                         },
                         interactivity: {
                             events: {
-                                onHover: { enable: true, mode: "repulse" },
-                                onClick: { enable: true, mode: "repulse" },
+                                onHover: {enable: true, mode: "repulse"},
+                                onClick: {enable: true, mode: "repulse"},
                             },
                             modes: {
-                                repulse: { distance: 100, duration: 0.4 },
+                                repulse: {distance: 100, duration: 0.4},
                             },
                         },
                         retina_detect: true,
@@ -67,7 +72,7 @@ const Hero = () => {
 
             <div className="hero__circle-text">
                 <svg viewBox="0 0 300 300">
-                    <path id="circlePath" d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0" />
+                    <path id="circlePath" d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0"/>
                     <text>
                         <textPath href="#circlePath" startOffset="0%">
                             vDisain. Kastist välja mõtlemine.
