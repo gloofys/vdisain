@@ -117,6 +117,11 @@
       transform: scale(1.1);
     }
   }
+  @media (max-width: 1024px) {
+    .menu-overlay__close {
+      color: #fff;
+    }
+  }
 }
 .contact-list {
   list-style: none;
