@@ -1,7 +1,7 @@
 import React from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useState } from "react";
-import { loadSlim } from "@tsparticles/slim";
+import Particles, {initParticlesEngine} from "@tsparticles/react";
+import {useEffect, useState} from "react";
+import {loadSlim} from "@tsparticles/slim";
 import "../styles/components/Hero.scss";
 import RotatingHeadline from "./RotatingHeadline.jsx";
 
@@ -56,30 +56,34 @@ const Hero = () => {
             )}
 
             <div className="hero__content">
-                <RotatingHeadline
-                    rotatingWords={[
-                        "veebilahenduste",
-                        "veebidisaini",
-                        "veebiarenduse",
-                        "digiturunduse"
-                    ]}
-                />
-                <div className="hero__buttons">
-                    <a href="#projects" className="btn">Tehtud tööd</a>
-                    <a href="#contact" className="btn btn--secondary">Kodulehe hooldus</a>
+                <div className="hero__panel">
+                    <RotatingHeadline
+                        rotatingWords={[
+                            "veebilahenduste",
+                            "veebidisaini",
+                            "veebiarenduse",
+                            "digiturunduse"
+                        ]}
+                    />
+                    <div className="hero__buttons">
+                        <a href="#projects" className="btn">Tehtud tööd</a>
+                        <a href="#contact" className="btn btn--secondary">Kodulehe hooldus</a>
+                    </div>
+
+
+
+                <div className="hero__circle-text">
+                    <svg viewBox="0 0 300 300">
+                        <path id="circlePath" d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0"/>
+                        <text>
+                            <textPath href="#circlePath" startOffset="0%">
+                                vDisain. Kastist välja mõtlemine.
+                            </textPath>
+                        </text>
+                    </svg>
+                    <button className="play-btn">▶</button>
                 </div>
             </div>
-
-            <div className="hero__circle-text">
-                <svg viewBox="0 0 300 300">
-                    <path id="circlePath" d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0"/>
-                    <text>
-                        <textPath href="#circlePath" startOffset="0%">
-                            vDisain. Kastist välja mõtlemine.
-                        </textPath>
-                    </text>
-                </svg>
-                <button className="play-btn">▶</button>
             </div>
         </section>
     );
