@@ -31,7 +31,7 @@ const RotatingHeadline = ({
           </span>
         ))}
       </span>
-            <span className="highlight">standardeid.</span>
+  <span className="outlined-hover">standardeid.</span>
         </h1>
     );
 };

@@ -28,7 +28,7 @@ const Hero = () => {
                         position: "absolute",
                         inset: 0,
                         zIndex: 0,
-                        pointerEvents: "auto", // <-- required for repulse to work
+                        pointerEvents: "none",
                     }}
                     options={{
                         fullScreen: {enable: false},
