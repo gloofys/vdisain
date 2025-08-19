@@ -53,12 +53,12 @@
 .outlined-hover {
   display: inline-block;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 
-  -webkit-text-fill-color: #00ADB5 !important;
+  -webkit-text-fill-color: #00ADB5;
 
   &:hover {
-    -webkit-text-fill-color: #fedf8e !important;
-    -webkit-text-stroke: 2px #c9dcdd !important;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #00ADB5;
   }
 }
