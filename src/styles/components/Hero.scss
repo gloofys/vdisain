@@ -209,6 +209,27 @@ $fade-out: 1.6s;
 }
 
 
-#tsparticles { z-index: 0; }
-.hero__content { position: relative; z-index: 1; }
-.hero__circle-text { position: absolute; z-index: 1; }
+
+
+.hero-section-wrapper {
+  position: relative;
+  z-index: 0;
+  height: 100vh;
+  }
+
+  #tsparticles {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .header {
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero {
+    position: relative;
+    z-index: 5;
+  }
