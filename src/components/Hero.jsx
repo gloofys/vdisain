@@ -8,11 +8,11 @@ const Hero = () => {
     return (
         <div className="hero-section-wrapper">
 
-
+            <GlobalParticles />
             <Header />
 
             <section className="hero" id="home">
-                <GlobalParticles />
+
                 <div className="hero__slideshow" aria-hidden="true">
                     <span className="hero__slide"></span>
                     <span className="hero__slide"></span>

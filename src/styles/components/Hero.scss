@@ -9,24 +9,10 @@
   text-align: center;
   color: white;
   overflow: hidden;
-  z-index: 1;
 
 
   background: radial-gradient(circle at center, #1d1d2e 0%, #0a0a14 100%);
 
-  #tsparticles {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-
-    canvas {
-      position: absolute !important;
-      inset: 0 !important;
-      z-index: 0 !important;
-      pointer-events: none !important;
-    }
-  }
 
 
   &__content {
@@ -167,7 +153,7 @@
 .hero__slideshow {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 }
 
@@ -213,15 +199,21 @@ $fade-out: 1.6s;
 
 .hero-section-wrapper {
   position: relative;
-  z-index: 0;
   height: 100vh;
   }
 
   #tsparticles {
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: 5;
     pointer-events: none;
+
+    canvas {
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 0 !important;
+      pointer-events: none !important;
+    }
   }
 
   .header {
@@ -229,7 +221,3 @@ $fade-out: 1.6s;
     z-index: 10;
   }
 
-  .hero {
-    position: relative;
-    z-index: 5;
-  }

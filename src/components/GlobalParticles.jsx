@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-const ParticlesBackground = () => {
+const GlobalParticles = () => {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
@@ -50,4 +50,4 @@ const ParticlesBackground = () => {
     );
 };
 
-export default ParticlesBackground;
+export default GlobalParticles;
